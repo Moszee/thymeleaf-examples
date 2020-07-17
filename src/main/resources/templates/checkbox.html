@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title title="Checkbox test"></title>
+</head>
+<form action="#" th:action="@{/save-checkbox}" th:object="${checkboxWrapper}" method="post">
+    <label th:for="${#ids.next('covered')}" >Checked</label>
+    <input title="is it checked?" type="checkbox" th:field="*{wasIChecked}" />
+    <button type="submit" name="addRow">Submit</button>
+</form>
+</html>
